@@ -28,7 +28,6 @@ flowchart TB
 
     %% Azure Microservices & Messaging Layer
     subgraph Azure["Azure Cloud (AKS / Container Apps & Integration Services)"]
-    <!--subgraph Azure["Azure Microservices & Integration Layer"]-->
         APIM["Azure API Management /<br/>CRM API Facade"]
         ProfileSvc["Profile Service"]
         SupportSvc["Supporting Services<br/>(Docs, Notifications, OTP, Templates)"]
