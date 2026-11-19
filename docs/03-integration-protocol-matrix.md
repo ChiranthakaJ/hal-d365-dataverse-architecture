@@ -1,8 +1,5 @@
 ### Component Interaction & Protocol Matrix
 
-```markdown
-# Component Interaction & Protocol Matrix
-
 The matrix below details the communication protocols, authentication mechanisms, interaction patterns, and exchanged payloads across all system boundaries.
 
 | Source $\rightarrow$ Target | Protocol & Security | Pattern | Data Exchanged | Operational Purpose |
