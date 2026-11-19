@@ -1,7 +1,7 @@
 Markdown
 # Domain Event Contracts (Azure Service Bus)
 
-These standardized JSON schemas define the asynchronous payloads published across Azure Service Bus Topics to decouple Dynamics 365 / Dataverse from Magento, Azure microservices, and notification workers.
+Using standardized JSON schemas for asynchronous messaging on Azure Service Bus Topics decouples Dynamics 365 and Dataverse from Magento, Azure microservices, and notification workers.
 
 ---
 
