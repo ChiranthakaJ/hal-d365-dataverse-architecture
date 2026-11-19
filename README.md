@@ -112,4 +112,4 @@ erDiagram
         boolean hal_isactive
         datetime hal_lastsyncedon
     }
-    ```
+```
