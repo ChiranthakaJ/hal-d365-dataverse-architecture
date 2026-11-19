@@ -1,6 +1,6 @@
 ### Component Interaction & Protocol Matrix
 
-The matrix below details the communication protocols, authentication mechanisms, interaction patterns, and exchanged payloads across all system boundaries.
+The matrix below maps the protocols, authentication, interaction patterns, and payloads exchanged across every system boundary.
 
 | Source $\rightarrow$ Target | Protocol & Security | Pattern | Data Exchanged | Operational Purpose |
 | :--- | :--- | :--- | :--- | :--- |
