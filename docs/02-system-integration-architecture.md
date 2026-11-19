@@ -70,43 +70,5 @@ flowchart TB
     Func -.->|"Async REST (Send Alerts)"| SupportSvc
     Func -.->|"Async REST / OpenAPI (mTLS)"| Banks
     Banks -.->|"Async Webhook Callback"| APIM
-
-```
-
-```json
-
-    {
-  "eventId": "evt_98f3a1c2-4b7e-4d1a-9f21-001a2b3c4d5e",
-  "eventType": "hal.kyb.application.approved",
-  "eventVersion": "1.0",
-  "timestamp": "2026-11-20T08:30:00Z",
-  "source": "dataverse-prod-uaenorth",
-  "data": {
-    "accountId": "7d444840-9dc0-11d1-b245-5ffdce74fad2",
-    "kybApplicationId": "3a112901-1bc2-44e1-9a12-88abce12ff90",
-    "auth0UserId": "auth0|64f8a9b2c1d3e4f5a6b7c8d9",
-    "tradeLicenseNumber": "CN-1234567",
-    "approvedRoles": ["BUYER", "SELLER"],
-    "approvedCreditLimitAED": 250000.00,
-    "reviewedBy": "compliance.officer@hal.ae"
-  }
-}
-
-{
-  "eventId": "evt_44c19b00-8e12-49a0-b112-99fa01234567",
-  "eventType": "hal.catalog.item.upserted",
-  "eventVersion": "1.0",
-  "timestamp": "2026-11-20T08:35:12Z",
-  "source": "magento-storefront-prod",
-  "data": {
-    "magentoSku": "HAL-IND-88412",
-    "magentoCompanyId": "MGT-COMP-9041",
-    "productName": "Industrial Grade Hydraulic Pump",
-    "category": "Heavy Machinery",
-    "unitPriceAED": 4200.00,
-    "isActive": true
-  }
-}
-
 ```
 
