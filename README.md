@@ -4,3 +4,4 @@
 2. **[System Integration Architecture](./docs/02-system-integration-architecture.md)** — End-to-end integration diagram, synchronous vs. event-driven communication matrix, identity federation (Auth0 & Entra ID), and sample Azure Service Bus event contracts.
 3. **[Component Interaction & Protocol Matrix](./docs/03-integration-protocol-matrix.md)** — Detailed breakdown of protocols, authentication, synchronous vs. event-driven patterns, and exchanged data.
 4. **[Domain Event Contracts](./docs/04-domain-event-contracts.md)** — Standardized Azure Service Bus JSON event schemas.
+5. **[Assumptions & Constraints](./docs/05-Architectural-Assumptions-&-Constraints.md)** — Standardized Azure Service Bus JSON event schemas.
