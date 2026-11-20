@@ -1,0 +1,19 @@
+## Architectural Assumptions & Constraints
+
+The following assumptions underpin the proposed HAL B2B Marketplace integration architecture and Dataverse schema design:
+
+| Domain | Assumption | Architectural Impact / Mitigation |
+| :--- | :--- | :--- |
+| **System of Record** | Dynamics 365 / Dataverse is the master system for Vendor/Buyer accounts, KYB verification, credit terms, and B2B order orchestration, while Magento serves as the storefront layer. | Downstream synchronization flows from Dataverse to Magento for approved accounts, credit limits, and catalog offers. |
+| **Catalog Master** | Product master records and vendor offers are authored or moderated in Dataverse prior to storefront publication. | Magento consumes catalog updates asynchronously via Azure Service Bus rather than acting as the primary product master. |
+| **Currency Handling** | Transactions operate primarily in AED with standard Dataverse base-currency management. | No real-time foreign exchange conversion engine is required at the Service Bus messaging layer. |
+| **Message Delivery** | Azure Service Bus Topics guarantee *at-least-once* delivery rather than *exactly-once* delivery. | All consumers and Dataverse integration endpoints enforce idempotency via external correlation IDs and Dataverse Alternate Keys. |
+| **Consistency Model** | Business operations tolerate sub-second to multi-second eventual consistency across system boundaries. | Cross-system updates (catalog sync, KYB status, order states) use asynchronous pub/sub messaging instead of blocking synchronous calls. |
+| **Message Ordering** | Events across topic subscriptions may arrive out of order unless Service Bus Sessions are explicitly enabled per entity key. | Consumers validate event timestamps or sequence versions before applying state transitions. |
+| **Error Handling** | Unprocessable ("poison") messages exceeding maximum delivery counts are routed to Dead-Letter Queues (DLQs). | Operational alerts monitor DLQs for manual inspection and replay without blocking active topic subscribers. |
+| **Authentication** | Internal Azure and Dataverse services authenticate via Microsoft Entra ID (OAuth 2.0 Client Credentials / Managed Identities); Magento authenticates via secured gateway tokens/webhooks. | Eliminates hardcoded credentials and enforces least-privilege access via Entra ID app registrations and Dataverse security roles. |
+| **Document Storage** | Binary KYB compliance files (Trade Licenses, VAT Certificates) are offloaded to Azure Blob Storage or SharePoint Online. | Dataverse stores document metadata, verification status, and secure URI references to prevent relational database bloat. |
+| **Data Residency** | Azure and Power Platform environments are provisioned within UAE regional data centers (UAE North / UAE Central). | Ensures alignment with regional data residency and B2B regulatory compliance standards. |
+| **Enumeration Alignment** | Status and state codes across Dataverse, Magento, and Azure microservices map directly to Dataverse Global Choice integer values. | Standardized JSON schemas reference canonical choice values to prevent enum drift across services. |
+| **Record Lifecycle** | Master entities (Vendors, Buyers, Products) use soft deletes (`Inactive` / `Suspended` / `Archived`) rather than hard deletes. | Preserves referential integrity across historical orders, audit logs, and asynchronous event replays. |
+| **Traffic Profile** | Marketplace workloads follow bursty B2B batch patterns (e.g., bulk catalog uploads, scheduled ERP syncs) rather than continuous high-frequency streaming. | Standard Dataverse API service protection limits are sufficient when buffered by Azure Service Bus queues and retry policies. |
