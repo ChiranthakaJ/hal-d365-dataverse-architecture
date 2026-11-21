@@ -11,7 +11,7 @@
 
 ---
 
-## 2. Mermaid.js Entity Relationship Diagram
+## 2. Entity Relationship Diagram
 
 ```mermaid
 erDiagram
