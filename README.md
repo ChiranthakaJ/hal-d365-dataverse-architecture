@@ -31,7 +31,7 @@ hal-d365-dataverse-architecture/
 ## Architecture Deliverables
 
 1. **[Dataverse Entity Design & ERD](./docs/01-dataverse-entity-design.md)** — Complete Entity-Relationship Diagram, Out-of-the-Box vs. custom table rationale, Alternate Keys, Business Process Flows, and security ownership models.
-2. **[System Integration Architecture](./docs/02-system-integration-architecture.md)** — End-to-end integration diagram, synchronous vs. event-driven communication matrix, identity federation (Auth0 & Entra ID), and sample Azure Service Bus event contracts.
+2. **[System Integration Architecture](./docs/02-system-integration-architecture.md)** — End-to-end integration diagram, integration topology connecting Dataverse with **Azure-hosted microservices** (via Azure API Management & Azure Service Bus), synchronous vs. event-driven communication matrix, identity federation (Auth0 & Entra ID), sample Azure Service Bus event contracts and ERP/financial settlement workflows.
 3. **[Component Interaction & Protocol Matrix](./docs/03-integration-protocol-matrix.md)** — Detailed breakdown of protocols, authentication, synchronous vs. event-driven patterns, and exchanged data.
 4. **[Domain Event Contracts](./docs/04-domain-event-contracts.md)** — Standardized Azure Service Bus JSON event schemas.
 5. **[Assumptions & Constraints](./docs/05-Architectural-Assumptions-&-Constraints.md)** — Key architectural assumptions, governance guardrails, multi-currency/regional handling, and scalability constraints.
