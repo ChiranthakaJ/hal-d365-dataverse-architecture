@@ -1,0 +1,91 @@
+﻿---
+title: HALCoreDataModel
+---
+erDiagram
+    account ||--o{ account : "parentaccountid"
+    account ||--o{ account : "msa_managingpartnerid"
+    account ||--o{ account : "masterid"
+    account ||--o{ hal_marketplaceinvoice : "Buyer Account"
+    account ||--o{ contact : "msa_managingpartnerid"
+    account ||--o{ contact : "parentcustomerid"
+    contact ||--o{ account : "primarycontactid"
+    account ||--o{ hal_vendorlisting : "Vendor"
+    account ||--o{ hal_marketplaceorder : "Buyer Account"
+    account ||--o{ hal_vendorpayout : "Vendor"
+    account ||--o{ hal_marketplaceorderline : "Vendor"
+    hal_region ||--o{ account : "Primary Region"
+    contact ||--o{ hal_marketplaceorder : "Buyer Contact"
+    contact ||--o{ contact : "parentcustomerid"
+    contact ||--o{ contact : "masterid"
+    hal_marketplaceproduct ||--o{ hal_vendorlisting : "Marketplace Product"
+    hal_marketplaceproduct ||--o{ hal_marketplaceorderline : "Marketplace Product"
+    hal_productcategory ||--o{ hal_marketplaceproduct : "Marketplace Product Category"
+    hal_productcategory ||--o{ hal_productcategory : "Parent Category"
+    hal_region ||--o{ hal_marketplaceorder : "Delivery Region"
+    hal_marketplaceorder ||--o{ hal_marketplaceorderline : "Marketplace Order"
+    hal_marketplaceorder ||--o{ hal_marketplaceinvoice : "Marketplace Order"
+    hal_marketplaceorder ||--o{ hal_vendorpayout : "Marketplace Order"
+    hal_vendorlisting ||--o{ hal_marketplaceorderline : "Vendor Listing"
+    hal_marketplaceinvoice ||--o{ hal_vendorpayout : "Marketplace Invoice"
+    account {
+        GUID accountid PK "Account"
+        GUID address1_addressid PK "Address 1: ID"
+        GUID address2_addressid PK "Address 2: ID"
+        Text name "Account Name"
+        Lookup_hal_region hal_primaryregion FK "Primary Region"
+    }
+    contact {
+        GUID address1_addressid PK "Address 1: ID"
+        GUID address2_addressid PK "Address 2: ID"
+        GUID address3_addressid PK "Address 3: ID"
+        GUID contactid PK "Contact"
+        Text fullname "Full Name"
+    }
+    hal_marketplaceproduct {
+        GUID hal_marketplaceproductid PK "Marketplace Product"
+        Text hal_productname "Product Name"
+        Lookup_hal_productcategory hal_marketplaceproductcategory FK "Marketplace Product Category"
+    }
+    hal_productcategory {
+        GUID hal_productcategoryid PK "Product Category"
+        Text hal_categoryname "Category Name"
+        Lookup_hal_productcategory hal_parentcategory FK "Parent Category"
+    }
+    hal_region {
+        GUID hal_regionid PK "Region"
+        Text hal_regionname "Region Name"
+    }
+    hal_marketplaceorder {
+        GUID hal_marketplaceorderid PK "Marketplace Order"
+        Text hal_ordernumber "Order Number"
+        Lookup_account hal_buyeraccount FK "Buyer Account"
+        Lookup_contact hal_buyercontact FK "Buyer Contact"
+        Lookup_hal_region hal_deliveryregion FK "Delivery Region"
+    }
+    hal_vendorlisting {
+        GUID hal_vendorlistingid PK "Vendor Listing"
+        Text hal_listingtitle "Listing Title"
+        Lookup_hal_marketplaceproduct hal_marketplaceproduct FK "Marketplace Product"
+        Lookup_account hal_vendor FK "Vendor"
+    }
+    hal_marketplaceorderline {
+        GUID hal_marketplaceorderlineid PK "Marketplace Order Line"
+        Text hal_orderlinereference "Order Line Reference"
+        Lookup_hal_marketplaceorder hal_marketplaceorder FK "Marketplace Order"
+        Lookup_hal_marketplaceproduct hal_marketplaceproduct FK "Marketplace Product"
+        Lookup_account hal_vendor FK "Vendor"
+        Lookup_hal_vendorlisting hal_vendorlisting FK "Vendor Listing"
+    }
+    hal_marketplaceinvoice {
+        GUID hal_marketplaceinvoiceid PK "Marketplace Invoice"
+        Text hal_invoicenumber "Invoice Number"
+        Lookup_account hal_buyeraccount FK "Buyer Account"
+        Lookup_hal_marketplaceorder hal_marketplaceorder FK "Marketplace Order"
+    }
+    hal_vendorpayout {
+        GUID hal_vendorpayoutid PK "Vendor Payout"
+        Text hal_payoutreference "Payout Reference"
+        Lookup_hal_marketplaceinvoice hal_marketplaceinvoice FK "Marketplace Invoice"
+        Lookup_hal_marketplaceorder hal_marketplaceorder FK "Marketplace Order"
+        Lookup_account hal_vendor FK "Vendor"
+    }

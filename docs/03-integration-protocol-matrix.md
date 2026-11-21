@@ -1,16 +1,35 @@
-### Component Interaction & Protocol Matrix
+# 03 — Integration Protocol Matrix
 
-The matrix below maps the protocols, authentication, interaction patterns, and payloads exchanged across every system boundary.
+## 1. Overview
+This matrix defines every interface connecting **Adobe Commerce (Magento 2)**, **Microsoft Dataverse (`HALCoreDataModel`)**, and **Dynamics 365 Finance / ERP**, specifying transport protocols, authentication standards, payload formats, throughput SLAs, and idempotency keys.
 
-| Source $\rightarrow$ Target | Protocol & Security | Pattern | Data Exchanged | Operational Purpose |
-| :--- | :--- | :--- | :--- | :--- |
-| **Magento $\leftrightarrow$ Profile Service** | **HTTPS / REST** (JSON)<br/>*Auth0 Bearer JWT* | **Synchronous**<br/>*(Request/Response)* | User registration payload, company details, onboarding step status, KYB gating flags. | Drives real-time buyer/seller onboarding steps inside the Magento storefront. |
-| **Profile Service $\rightarrow$ CRM API Facade $\rightarrow$ Dataverse** | **HTTPS / REST** $\rightarrow$ **OData v4** (JSON)<br/>*Entra ID S2S OAuth 2.0* | **Synchronous**<br/>*(Request/Response)* | `Contact` (`hal_auth0userid`), `Account` (`hal_tradelicensenumber`), `hal_kybapplication`. | Persists company and applicant records immediately upon registration with duplicate detection via Alternate Keys. |
-| **Magento $\rightarrow$ Service Bus $\rightarrow$ Azure Function $\rightarrow$ Dataverse** | **AMQP / HTTPS** (JSON) $\rightarrow$ **OData v4**<br/>*Managed Identity* | **Asynchronous**<br/>*(Event-Driven Pub/Sub)* | Product SKU, category, seller ID, unit price, active flag (`catalog.item.upserted`). | Decouples high-volume Magento catalog updates from Dataverse API rate limits using batched `UPSERT` operations and Dead-Letter Queues (DLQs). |
-| **D365 Model-Driven App $\leftrightarrow$ Dataverse** | **HTTPS / Dataverse Web API**<br/>*Entra ID Native SSO* | **Synchronous**<br/>*(Native UI)* | Company profiles, KYB checklists, risk ratings, approval/rejection decisions, audit logs. | Replaces the legacy Admin Backoffice; staff review applications via Business Process Flows (BPFs) with full OOB audit history. |
-| **Dataverse $\rightarrow$ Azure Service Bus** | **AMQP / HTTPS** (JSON)<br/>*SAS / Managed Identity* | **Asynchronous**<br/>*(Event-Driven Outbox)* | Domain events: `hal.kyb.application.approved`, `hal.kyb.application.rejected`, `hal.account.verified`. | Uses Dataverse's native **Azure Service Bus Integration** (or post-operation async plugin) to broadcast state transitions reliably. |
-| **Azure Service Bus $\rightarrow$ Profile Service / Magento** | **AMQP** (JSON)<br/>*Managed Identity* | **Asynchronous**<br/>*(Topic Subscription)* | Approved buyer/seller roles, credit limits, account status flags. | Unlocks storefront trading/listing privileges once compliance officers approve KYB in Dynamics 365. |
-| **Financing Portal $\leftrightarrow$ CRM API Facade $\rightarrow$ Dataverse** | **HTTPS / REST** $\rightarrow$ **OData v4** (JSON)<br/>*Auth0 JWT* $\rightarrow$ *Entra S2S* | **Synchronous**<br/>*(Reads & Initial Submit)* | Verified `Account` KYB profile, loan amount, tenure, target `hal_lendingpartner`. | Pre-populates loan/account-opening forms from verified Dataverse KYB records and creates `hal_financingapplication` rows. |
-| **Dataverse $\leftrightarrow$ Partner Banks** *(via Azure Functions)* | **HTTPS / REST** (JSON)<br/>*OAuth 2.0 + mTLS* | **Asynchronous**<br/>*(Webhook / Callback)* | Standardized underwriting dossier (JSON + SAS doc links); bank status & offer terms. | Decouples multi-day bank underwriting from CRM; banks push status changes (`Offer_Made`, `Disbursed`, `Declined`) via signed webhooks. |
-| **Portals $\rightarrow$ Supporting Services (Docs & OTP)** | **HTTPS / REST** (Multipart / JSON)<br/>*Auth0 JWT / API Key* | **Synchronous** (OTP/Upload) + **Async** (Metadata) | OTP codes (ephemeral); binary files uploaded to Azure Blob; metadata written to `hal_kybdocument`. | Offloads heavy PDF/image binaries to Azure Blob Storage while syncing document URLs and expiry dates to Dataverse. |
-| **Azure Service Bus $\rightarrow$ Supporting Services (Notifications)** | **AMQP** (JSON)<br/>*Managed Identity* | **Asynchronous**<br/>*(Event-Driven Fan-Out)* | Event type, recipient contact info, template merge variables (e.g., rejection reason). | Decouples transactional email/SMS/push alerts from core CRM transactions. |
+---
+
+## 2. Interface Catalog
+
+| Interface ID | Interface Name | Source → Target | Trigger / Cadence | Protocol & Transport | Auth Mechanism | Idempotency / Alternate Key | SLA / Latency Target |
+|---|---|---|---|---|---|---|---|
+| **INT-01** | B2B Company & Signatory Registration | Adobe Commerce → Dataverse | Real-time (Event) | HTTPS REST (`POST` → Service Bus → Dataverse Web API `PATCH`) | HMAC-SHA256 (Webhook) + Entra ID OAuth 2.0 (Client Credentials) | `account.hal_magentoentityid`<br>`contact.hal_magentouserid` | $< 5\text{ seconds}$ |
+| **INT-02** | KYB & Account Approval Sync | Dataverse → Adobe Commerce | Real-time (Plugin / Service Endpoint) | HTTPS REST (`PUT /V1/company/:id`) via APIM | OAuth 2.0 Bearer Token (Magento Integration Token) | `account.hal_magentoentityid` | $< 10\text{ seconds}$ |
+| **INT-03** | Category Hierarchy Sync | Dataverse → Adobe Commerce | On Create / Update | HTTPS REST (`POST/PUT /V1/categories`) via APIM | OAuth 2.0 Bearer Token | `hal_productcategory.hal_magentocategoryid`<br>`hal_productcategory.hal_categorycode` | $< 30\text{ seconds}$ |
+| **INT-04** | Approved Master Product Publish | Dataverse → Adobe Commerce | On `hal_approvalstatus == Approved` | HTTPS REST (`POST/PUT /V1/products`) via APIM | OAuth 2.0 Bearer Token | `hal_marketplaceproduct.hal_marketplacesku`<br>`hal_marketplaceproduct.hal_magentoproductid` | $< 15\text{ seconds}$ |
+| **INT-05** | Vendor Listing & Stock Ingestion | Adobe Commerce / Vendor Portal → Dataverse | Near Real-time (Event / 5-min Micro-batch) | HTTPS REST → Service Bus → Dataverse Web API `PATCH` | Entra ID OAuth 2.0 (Client Credentials) | `hal_vendorlisting.hal_magentolistingid` | $< 15\text{ seconds}$ |
+| **INT-06** | Approved Vendor Listing Activation | Dataverse → Adobe Commerce | On `hal_approvalstatus == Approved` | HTTPS REST (`PUT /V1/marketplace/offers`) via APIM | OAuth 2.0 Bearer Token | `hal_vendorlisting.hal_magentolistingid` | $< 15\text{ seconds}$ |
+| **INT-07** | Marketplace Order & Line Capture | Adobe Commerce → Dataverse | Real-time (Checkout Complete) | HTTPS REST → Service Bus Topic → Azure Function (`$batch` Web API `PATCH`) | HMAC-SHA256 + Entra ID OAuth 2.0 | `hal_marketplaceorder.hal_magentoorderid`<br>`hal_marketplaceorderline.hal_magentoorderitemid` | $< 5\text{ seconds}$ |
+| **INT-08** | Line Fulfillment Status Update | Dataverse / Vendor Portal → Adobe Commerce | Real-time (On `hal_fulfillmentstatus` change) | HTTPS REST (`POST /V1/order/:id/ship`) via APIM | OAuth 2.0 Bearer Token | `hal_marketplaceorderline.hal_magentoorderitemid` | $< 10\text{ seconds}$ |
+| **INT-09** | Tax Invoice Creation & ERP AR Posting | Dataverse → ERP Finance & Adobe Commerce | Event-driven (Order Fulfilled / Invoiced) | HTTPS REST / OData v4 (`POST` to ERP AR Ledger + M2 Invoice API) | Entra ID Managed Identity / OAuth 2.0 | `hal_marketplaceinvoice.hal_invoicenumber`<br>`hal_marketplaceinvoice.hal_magentoinvoiceid` | $< 30\text{ seconds}$ |
+| **INT-10** | Invoice Payment Settlement Confirmation | ERP Finance → Dataverse | Near Real-time (Bank Reconciliation Event) | Azure Service Bus → Dataverse Web API `PATCH` | Entra ID OAuth 2.0 (Client Credentials) | `hal_marketplaceinvoice.hal_invoicenumber` | $< 60\text{ seconds}$ |
+| **INT-11** | Vendor Payout Disbursement Batch | Dataverse → ERP AP / Treasury | Scheduled (Daily / Weekly Cut-off) | SFTP (ISO 20022 `pain.001`) or HTTPS REST to ERP AP | SSH Key / PGP + Entra ID OAuth 2.0 | `hal_vendorpayout.hal_payoutreference` | Batch window ($< 15\text{ mins}$) |
+| **INT-12** | Payout Bank Confirmation & Trace Update | ERP AP / Bank → Dataverse | Event-driven (Settlement Clearing) | Azure Service Bus → Dataverse Web API `PATCH` | Entra ID OAuth 2.0 (Client Credentials) | `hal_vendorpayout.hal_payoutreference` | $< 2\text{ minutes}$ |
+
+---
+
+## 3. Transport & Security Standards
+
+1. **TLS & Encryption:**
+   - All external and internal API traffic enforces **TLS 1.2+** (TLS 1.3 preferred).
+   - Sensitive KYB identifiers (`hal_tradelicensenumber`, `hal_nationalid`, `hal_banktransferreference`) are protected in transit via HTTPS and at rest via Dataverse Transparent Data Encryption (TDE) with column-level security profiles applied to financial and PII fields.
+2. **API Gateway Governance (Azure APIM):**
+   - Enforces JWT validation, IP allowlisting for Adobe Commerce webhooks, payload schema validation (JSON Schema Draft-07), and Dataverse API protection limit throttling (`6,000` requests per 5-minute sliding window per service principal).
+3. **Dataverse Batching (`$batch`):**
+   - Multi-line order ingestion (**INT-07**) wraps the `hal_marketplaceorder` header upsert and all child `hal_marketplaceorderline` upserts inside a single Dataverse **`$batch` transactional changeset** so partial orders never persist if a lookup validation fails.

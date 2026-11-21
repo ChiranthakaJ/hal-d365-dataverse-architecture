@@ -1,0 +1,856 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>HALCoreDataModel</title>
+<style>
+body{font-family:'Segoe UI',Arial,sans-serif;margin:0;color:#212936;background:#f5f6f8}
+.wrap{max-width:1200px;margin:0 auto;padding:24px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 8px}
+.sub{color:#6e7681;font-size:13px;margin-bottom:16px}
+.diagram{background:#fff;border:1px solid #d8dce2;border-radius:8px;overflow:auto;max-height:75vh}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #d8dce2;border-radius:8px;font-size:13px}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid #e8ebef;vertical-align:top}
+th{background:#eef1f5;font-weight:600}
+.badge{display:inline-block;font-size:10px;font-weight:700;color:#fff;border-radius:3px;padding:1px 5px;margin-right:6px}
+.pk{background:#f59f00}.nm{background:#388e3c}.fk{background:#1976d2}
+.muted{color:#828a94}
+</style></head><body><div class="wrap">
+<h1>HALCoreDataModel</h1>
+<div class="sub">HALCoreDataModel · v1.0.0.0 · unmanaged · generated 2026-11-21 10:58</div>
+<div class="diagram">
+<svg xmlns="http://www.w3.org/2000/svg" width="2127.55" height="1494.76" viewBox="0 0 2127.55 1494.76">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="30" y="42.7" font-family="Segoe UI, Arial, sans-serif" font-size="17.33" font-weight="bold" fill="#212936">HALCoreDataModel</text>
+<text x="30" y="56.79" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6E7681">HALCoreDataModel · v1.0.0.0 · unmanaged</text>
+<line x1="591.07" y1="192" x2="617.07" y2="192" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="617.07" y1="192" x2="617.07" y2="206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="617.07" y1="206" x2="591.07" y2="206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="600.07" y1="197" x2="600.07" y2="187" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="206" x2="591.07" y2="213" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="206" x2="591.07" y2="206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="206" x2="591.07" y2="199" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="591.07" y1="174" x2="625.07" y2="174" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="625.07" y1="174" x2="625.07" y2="188" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="625.07" y1="188" x2="591.07" y2="188" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="600.07" y1="179" x2="600.07" y2="169" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="188" x2="591.07" y2="195" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="188" x2="591.07" y2="188" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="188" x2="591.07" y2="181" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="591.07" y1="156" x2="633.07" y2="156" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="633.07" y1="156" x2="633.07" y2="170" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="633.07" y1="170" x2="591.07" y2="170" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="600.07" y1="161" x2="600.07" y2="151" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="170" x2="591.07" y2="177" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="170" x2="591.07" y2="170" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="170" x2="591.07" y2="163" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="465.93" y1="216" x2="465.93" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="465.93" y1="463" x2="531.34" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="531.34" y1="463" x2="531.34" y2="955" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="531.34" y1="955" x2="1858.41" y2="955" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1858.41" y1="955" x2="1858.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="460.93" y1="225" x2="470.93" y2="225" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1858.41" y1="1067.55" x2="1865.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1858.41" y1="1067.55" x2="1858.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1858.41" y1="1067.55" x2="1851.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="483.93" y1="216" x2="483.93" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="483.93" y1="463" x2="1023.7" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1023.7" y1="463" x2="1023.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="478.93" y1="225" x2="488.93" y2="225" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1023.7" y1="30.2" x2="1016.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1023.7" y1="30.2" x2="1023.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1023.7" y1="30.2" x2="1030.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="501.93" y1="216" x2="501.93" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="501.93" y1="463" x2="1041.7" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1041.7" y1="463" x2="1041.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="496.93" y1="225" x2="506.93" y2="225" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1041.7" y1="30.2" x2="1034.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1041.7" y1="30.2" x2="1041.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1041.7" y1="30.2" x2="1048.7" y2="18.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1107.7" y1="92.7" x2="788.07" y2="92.7" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="788.07" y1="92.7" x2="788.07" y2="169.5" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="788.07" y1="169.5" x2="591.07" y2="169.5" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1098.7" y1="87.7" x2="1098.7" y2="97.7" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="169.5" x2="591.07" y2="176.5" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="169.5" x2="591.07" y2="169.5" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="603.07" y1="169.5" x2="591.07" y2="162.5" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="429.93" y1="216" x2="429.93" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="429.93" y1="463" x2="256.66" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="256.66" y1="463" x2="256.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="424.93" y1="225" x2="434.93" y2="225" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="256.66" y1="544.8" x2="263.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="256.66" y1="544.8" x2="256.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="256.66" y1="544.8" x2="249.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="519.93" y1="216" x2="519.93" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="519.93" y1="463" x2="803.34" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="803.34" y1="463" x2="803.34" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="803.34" y1="709" x2="1689.92" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1689.92" y1="709" x2="1689.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="514.93" y1="225" x2="524.93" y2="225" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1689.92" y1="797.95" x2="1696.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1689.92" y1="797.95" x2="1689.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1689.92" y1="797.95" x2="1682.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="537.93" y1="216" x2="537.93" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="537.93" y1="463" x2="935.34" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="935.34" y1="463" x2="935.34" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="935.34" y1="709" x2="953.91" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="953.91" y1="709" x2="953.91" y2="1206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="953.91" y1="1206" x2="1184.66" y2="1206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1184.66" y1="1206" x2="1184.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="532.93" y1="225" x2="542.93" y2="225" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1184.66" y1="1285.4" x2="1191.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1184.66" y1="1285.4" x2="1184.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1184.66" y1="1285.4" x2="1177.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="447.93" y1="216" x2="447.93" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="447.93" y1="463" x2="465.34" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="465.34" y1="463" x2="465.34" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="465.34" y1="945" x2="265.97" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="265.97" y1="945" x2="265.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="442.93" y1="225" x2="452.93" y2="225" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="265.97" y1="1027.76" x2="272.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="265.97" y1="1027.76" x2="265.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="265.97" y1="1027.76" x2="258.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1234.4" y1="346.72" x2="1234.4" y2="227" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1234.4" y1="227" x2="483.93" y2="227" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="483.93" y1="227" x2="483.93" y2="95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1239.4" y1="337.72" x2="1229.4" y2="337.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="483.93" y1="107" x2="476.93" y2="95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="483.93" y1="107" x2="483.93" y2="95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="483.93" y1="107" x2="490.93" y2="95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1032.7" y1="139.2" x2="1032.7" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1032.7" y1="709" x2="1707.92" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1707.92" y1="709" x2="1707.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1027.7" y1="148.2" x2="1037.7" y2="148.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1707.92" y1="797.95" x2="1714.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1707.92" y1="797.95" x2="1707.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1707.92" y1="797.95" x2="1700.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1107.7" y1="115.2" x2="1133.7" y2="115.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1133.7" y1="115.2" x2="1133.7" y2="129.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1133.7" y1="129.2" x2="1107.7" y2="129.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1116.7" y1="120.2" x2="1116.7" y2="110.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1119.7" y1="129.2" x2="1107.7" y2="136.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1119.7" y1="129.2" x2="1107.7" y2="129.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1119.7" y1="129.2" x2="1107.7" y2="122.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1107.7" y1="97.2" x2="1141.7" y2="97.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1141.7" y1="97.2" x2="1141.7" y2="111.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1141.7" y1="111.2" x2="1107.7" y2="111.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1116.7" y1="102.2" x2="1116.7" y2="92.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1119.7" y1="111.2" x2="1107.7" y2="118.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1119.7" y1="111.2" x2="1107.7" y2="111.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1119.7" y1="111.2" x2="1107.7" y2="104.2" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="146" y1="432.72" x2="146" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="146" y1="463" x2="238.66" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="238.66" y1="463" x2="238.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="141" y1="441.72" x2="151" y2="441.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="238.66" y1="544.8" x2="245.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="238.66" y1="544.8" x2="238.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="238.66" y1="544.8" x2="231.66" y2="556.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="164" y1="432.72" x2="164" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="164" y1="463" x2="93.34" y2="463" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="93.34" y1="463" x2="93.34" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="93.34" y1="945" x2="229.97" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="229.97" y1="945" x2="229.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="159" y1="441.72" x2="169" y2="441.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="229.97" y1="1027.76" x2="236.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="229.97" y1="1027.76" x2="229.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="229.97" y1="1027.76" x2="222.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="155" y1="167" x2="155" y2="341.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="150" y1="176" x2="160" y2="176" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="155" y1="329.72" x2="162" y2="341.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="155" y1="329.72" x2="155" y2="341.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="155" y1="329.72" x2="148" y2="341.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="280" y1="143" x2="306" y2="143" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="306" y1="143" x2="306" y2="157" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="306" y1="157" x2="280" y2="157" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="289" y1="148" x2="289" y2="138" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="292" y1="157" x2="280" y2="164" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="292" y1="157" x2="280" y2="157" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="292" y1="157" x2="280" y2="150" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1252.4" y1="346.72" x2="1252.4" y2="227" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1252.4" y1="227" x2="821.07" y2="227" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="821.07" y1="227" x2="821.07" y2="473" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="821.07" y1="473" x2="869.34" y2="473" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="869.34" y1="473" x2="869.34" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="869.34" y1="709" x2="1725.92" y2="709" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1725.92" y1="709" x2="1725.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1257.4" y1="337.72" x2="1247.4" y2="337.72" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1725.92" y1="797.95" x2="1732.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1725.92" y1="797.95" x2="1725.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1725.92" y1="797.95" x2="1718.92" y2="809.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1689.92" y1="930.95" x2="1689.92" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1689.92" y1="945" x2="283.97" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="283.97" y1="945" x2="283.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1684.92" y1="939.95" x2="1694.92" y2="939.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="283.97" y1="1027.76" x2="290.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="283.97" y1="1027.76" x2="283.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="283.97" y1="1027.76" x2="276.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1707.92" y1="930.95" x2="1707.92" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1707.92" y1="945" x2="1876.41" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1876.41" y1="945" x2="1876.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1702.92" y1="939.95" x2="1712.92" y2="939.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1876.41" y1="1067.55" x2="1883.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1876.41" y1="1067.55" x2="1876.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1876.41" y1="1067.55" x2="1869.41" y2="1079.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1725.92" y1="930.95" x2="1725.92" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1725.92" y1="945" x2="831.05" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="831.05" y1="945" x2="831.05" y2="1206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="831.05" y1="1206" x2="1202.66" y2="1206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1202.66" y1="1206" x2="1202.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1720.92" y1="939.95" x2="1730.92" y2="939.95" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1202.66" y1="1285.4" x2="1209.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1202.66" y1="1285.4" x2="1202.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1202.66" y1="1285.4" x2="1195.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="247.66" y1="662.8" x2="247.66" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="247.66" y1="945" x2="247.97" y2="945" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="247.97" y1="945" x2="247.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="242.66" y1="671.8" x2="252.66" y2="671.8" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="247.97" y1="1027.76" x2="254.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="247.97" y1="1027.76" x2="247.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="247.97" y1="1027.76" x2="240.97" y2="1039.76" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1867.41" y1="1185.55" x2="1867.41" y2="1206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1867.41" y1="1206" x2="1166.66" y2="1206" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1166.66" y1="1206" x2="1166.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1862.41" y1="1194.55" x2="1872.41" y2="1194.55" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1166.66" y1="1285.4" x2="1173.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1166.66" y1="1285.4" x2="1166.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<line x1="1166.66" y1="1285.4" x2="1159.66" y2="1297.4" stroke="#6E7681" stroke-width="1.4" fill="none"/>
+<rect x="376.8" y="95" width="214.26" height="121" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="376.8" y="95" width="214.26" height="44" rx="6" ry="6" fill="#25589E"/>
+<polygon points="376.8,133 591.07,133 591.07,139 376.8,139" fill="#FFFFFF"/>
+<text x="386.8" y="114.67" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Account</text>
+<text x="386.8" y="126.07" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">account</text>
+<rect x="386.8" y="139" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="391.75" y="147.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="410.8" y="149.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Account</text>
+<text x="556.1" y="149.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="386.8" y="154" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="391.75" y="162.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="410.8" y="164.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Address 1: ID</text>
+<text x="556.1" y="164.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="386.8" y="169" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="391.75" y="177.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="410.8" y="179.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Address 2: ID</text>
+<text x="556.1" y="179.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="386.8" y="184" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="393.64" y="192.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="410.8" y="194.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Account Name</text>
+<text x="561.39" y="194.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="386.8" y="199" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="392.13" y="207.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="410.8" y="209.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Primary Region</text>
+<text x="507.14" y="209.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_re…</text>
+<rect x="376.8" y="95" width="214.26" height="121" rx="6" ry="6" fill="none" stroke="#1D467E" stroke-width="1.5"/>
+<line x1="376.8" y1="133" x2="591.07" y2="133" stroke="#1D467E" stroke-width="1" fill="none"/>
+<rect x="957.7" y="18.2" width="150" height="121" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="957.7" y="18.2" width="150" height="44" rx="6" ry="6" fill="#25589E"/>
+<polygon points="957.7,56.2 1107.7,56.2 1107.7,62.2 957.7,62.2" fill="#FFFFFF"/>
+<text x="967.7" y="37.87" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Contact</text>
+<text x="967.7" y="49.27" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">contact</text>
+<rect x="967.7" y="62.2" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="972.65" y="71.01" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="991.7" y="72.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Address 1: ID</text>
+<text x="1072.74" y="72.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="967.7" y="77.2" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="972.65" y="86.01" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="991.7" y="87.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Address 2: ID</text>
+<text x="1072.74" y="87.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="967.7" y="92.2" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="972.65" y="101.01" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="991.7" y="102.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Address 3: ID</text>
+<text x="1072.74" y="102.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="967.7" y="107.2" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="972.65" y="116.01" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="991.7" y="117.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Contact</text>
+<text x="1072.74" y="117.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="967.7" y="122.2" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="974.54" y="131.01" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="991.7" y="132.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Full Name</text>
+<text x="1078.02" y="132.71" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="957.7" y="18.2" width="150" height="121" rx="6" ry="6" fill="none" stroke="#1D467E" stroke-width="1.5"/>
+<line x1="957.7" y1="56.2" x2="1107.7" y2="56.2" stroke="#1D467E" stroke-width="1" fill="none"/>
+<rect x="30" y="341.72" width="250" height="91" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="30" y="341.72" width="250" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="30,379.72 280,379.72 280,385.72 30,385.72" fill="#FFFFFF"/>
+<text x="40" y="361.39" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Marketplace Product</text>
+<text x="40" y="372.79" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_marketplaceproduct</text>
+<rect x="40" y="385.72" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="44.95" y="394.53" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="64" y="396.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Marketplace Product</text>
+<text x="245.04" y="396.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="40" y="400.72" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="46.84" y="409.53" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="64" y="411.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Product Name</text>
+<text x="250.32" y="411.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="40" y="415.72" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="45.32" y="424.53" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="64" y="426.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Marketplace Product…</text>
+<text x="182.85" y="426.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_prod…</text>
+<rect x="30" y="341.72" width="250" height="91" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="30" y1="379.72" x2="280" y2="379.72" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="30" y="76" width="250" height="91" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="30" y="76" width="250" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="30,114 280,114 280,120 30,120" fill="#FFFFFF"/>
+<text x="40" y="95.67" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Product Category</text>
+<text x="40" y="107.07" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_productcategory</text>
+<rect x="40" y="120" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="44.95" y="128.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="64" y="130.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Product Category</text>
+<text x="245.04" y="130.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="40" y="135" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="46.84" y="143.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="64" y="145.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Category Name</text>
+<text x="250.32" y="145.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="40" y="150" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="45.32" y="158.81" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="64" y="160.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Parent Category</text>
+<text x="182.85" y="160.51" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_prod…</text>
+<rect x="30" y="76" width="250" height="91" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="30" y1="114" x2="280" y2="114" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="1168.4" y="270.72" width="150" height="76" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="1168.4" y="270.72" width="150" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="1168.4,308.72 1318.4,308.72 1318.4,314.72 1168.4,314.72" fill="#FFFFFF"/>
+<text x="1178.4" y="290.39" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Primary Region</text>
+<text x="1178.4" y="301.79" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_region</text>
+<rect x="1178.4" y="314.72" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="1183.35" y="323.53" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="1202.4" y="325.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Region</text>
+<text x="1283.44" y="325.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="1178.4" y="329.72" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="1185.24" y="338.53" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="1202.4" y="340.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Region Name</text>
+<text x="1288.72" y="340.23" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="1168.4" y="270.72" width="150" height="76" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="1168.4" y1="308.72" x2="1318.4" y2="308.72" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="1599.77" y="809.95" width="216.29" height="121" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="1599.77" y="809.95" width="216.29" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="1599.77,847.95 1816.06,847.95 1816.06,853.95 1599.77,853.95" fill="#FFFFFF"/>
+<text x="1609.77" y="829.62" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Marketplace Order</text>
+<text x="1609.77" y="841.02" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_marketplaceorder</text>
+<rect x="1609.77" y="853.95" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="1614.72" y="862.76" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="1633.77" y="864.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Marketplace Order</text>
+<text x="1781.1" y="864.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="1609.77" y="868.95" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="1616.61" y="877.76" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="1633.77" y="879.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Order Number</text>
+<text x="1786.39" y="879.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="1609.77" y="883.95" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1615.1" y="892.76" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1633.77" y="894.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Buyer Account</text>
+<text x="1732.33" y="894.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(accou…</text>
+<rect x="1609.77" y="898.95" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1615.1" y="907.76" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1633.77" y="909.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Buyer Contact</text>
+<text x="1729.7" y="909.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(contact)</text>
+<rect x="1609.77" y="913.95" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1615.1" y="922.76" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1633.77" y="924.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Delivery Region</text>
+<text x="1732.14" y="924.46" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_re…</text>
+<rect x="1599.77" y="809.95" width="216.29" height="121" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="1599.77" y1="847.95" x2="1816.06" y2="847.95" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="122.66" y="556.8" width="250" height="106" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="122.66" y="556.8" width="250" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="122.66,594.8 372.66,594.8 372.66,600.8 122.66,600.8" fill="#FFFFFF"/>
+<text x="132.66" y="576.47" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Vendor Listing</text>
+<text x="132.66" y="587.87" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_vendorlisting</text>
+<rect x="132.66" y="600.8" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="137.61" y="609.61" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="156.66" y="611.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Vendor Listing</text>
+<text x="337.69" y="611.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="132.66" y="615.8" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="139.5" y="624.61" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="156.66" y="626.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Listing Title</text>
+<text x="342.98" y="626.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="132.66" y="630.8" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="137.98" y="639.61" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="156.66" y="641.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Marketplace Product</text>
+<text x="274.39" y="641.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_mark…</text>
+<rect x="132.66" y="645.8" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="137.98" y="654.61" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="156.66" y="656.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Vendor</text>
+<text x="283.87" y="656.31" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(account)</text>
+<rect x="122.66" y="556.8" width="250" height="106" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="122.66" y1="594.8" x2="372.66" y2="594.8" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="131.97" y="1039.76" width="250" height="136" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="131.97" y="1039.76" width="250" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="131.97,1077.76 381.97,1077.76 381.97,1083.76 131.97,1083.76" fill="#FFFFFF"/>
+<text x="141.97" y="1059.43" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Marketplace Order Line</text>
+<text x="141.97" y="1070.83" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_marketplaceorderline</text>
+<rect x="141.97" y="1083.76" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="146.92" y="1092.57" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="165.97" y="1094.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Marketplace Order Line</text>
+<text x="347.01" y="1094.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="141.97" y="1098.76" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="148.81" y="1107.57" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="165.97" y="1109.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Order Line Reference</text>
+<text x="352.29" y="1109.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="141.97" y="1113.76" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="147.3" y="1122.57" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="165.97" y="1124.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Marketplace Order</text>
+<text x="283.71" y="1124.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_mark…</text>
+<rect x="141.97" y="1128.76" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="147.3" y="1137.57" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="165.97" y="1139.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Marketplace Product</text>
+<text x="283.71" y="1139.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_mark…</text>
+<rect x="141.97" y="1143.76" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="147.3" y="1152.57" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="165.97" y="1154.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Vendor</text>
+<text x="293.19" y="1154.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(account)</text>
+<rect x="141.97" y="1158.76" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="147.3" y="1167.57" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="165.97" y="1169.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Vendor Listing</text>
+<text x="284.33" y="1169.27" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_vend…</text>
+<rect x="131.97" y="1039.76" width="250" height="136" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="131.97" y1="1077.76" x2="381.97" y2="1077.76" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="1742.41" y="1079.55" width="250" height="106" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="1742.41" y="1079.55" width="250" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="1742.41,1117.55 1992.41,1117.55 1992.41,1123.55 1742.41,1123.55" fill="#FFFFFF"/>
+<text x="1752.41" y="1099.22" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Marketplace Invoice</text>
+<text x="1752.41" y="1110.63" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_marketplaceinvoice</text>
+<rect x="1752.41" y="1123.55" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="1757.36" y="1132.37" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="1776.41" y="1134.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Marketplace Invoice</text>
+<text x="1957.45" y="1134.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="1752.41" y="1138.55" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="1759.25" y="1147.37" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="1776.41" y="1149.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Invoice Number</text>
+<text x="1962.73" y="1149.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="1752.41" y="1153.55" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1757.73" y="1162.37" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1776.41" y="1164.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Buyer Account</text>
+<text x="1903.62" y="1164.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(account)</text>
+<rect x="1752.41" y="1168.55" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1757.73" y="1177.37" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1776.41" y="1179.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Marketplace Order</text>
+<text x="1894.14" y="1179.07" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_mark…</text>
+<rect x="1742.41" y="1079.55" width="250" height="106" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="1742.41" y1="1117.55" x2="1992.41" y2="1117.55" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="1059.66" y="1297.4" width="250" height="121" rx="6" ry="6" fill="#FFFFFF"/>
+<rect x="1059.66" y="1297.4" width="250" height="44" rx="6" ry="6" fill="#007885"/>
+<polygon points="1059.66,1335.4 1309.66,1335.4 1309.66,1341.4 1059.66,1341.4" fill="#FFFFFF"/>
+<text x="1069.66" y="1317.07" font-family="Segoe UI, Arial, sans-serif" font-size="12.67" font-weight="bold" fill="#FFFFFF">Vendor Payout</text>
+<text x="1069.66" y="1328.48" font-family="Segoe UI, Arial, sans-serif" font-size="9.33" fill="#FFFFFF">hal_vendorpayout</text>
+<rect x="1069.66" y="1341.4" width="20" height="11" rx="3" ry="3" fill="#F59F00"/>
+<text x="1074.61" y="1350.22" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">PK</text>
+<text x="1093.66" y="1351.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Vendor Payout</text>
+<text x="1274.7" y="1351.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">GUID</text>
+<rect x="1069.66" y="1356.4" width="20" height="11" rx="3" ry="3" fill="#388E3C"/>
+<text x="1076.5" y="1365.22" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">N</text>
+<text x="1093.66" y="1366.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" font-weight="bold" fill="#263238">Payout Reference</text>
+<text x="1279.98" y="1366.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Text</text>
+<rect x="1069.66" y="1371.4" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1074.99" y="1380.22" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1093.66" y="1381.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Marketplace Invoice</text>
+<text x="1211.4" y="1381.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_mark…</text>
+<rect x="1069.66" y="1386.4" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1074.99" y="1395.22" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1093.66" y="1396.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Marketplace Order</text>
+<text x="1211.4" y="1396.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(hal_mark…</text>
+<rect x="1069.66" y="1401.4" width="20" height="11" rx="3" ry="3" fill="#1976D2"/>
+<text x="1074.99" y="1410.22" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">FK</text>
+<text x="1093.66" y="1411.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#263238">Vendor</text>
+<text x="1220.87" y="1411.91" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#828A94">Lookup(account)</text>
+<rect x="1059.66" y="1297.4" width="250" height="121" rx="6" ry="6" fill="none" stroke="#00606A" stroke-width="1.5"/>
+<line x1="1059.66" y1="1335.4" x2="1309.66" y2="1335.4" stroke="#00606A" stroke-width="1" fill="none"/>
+<rect x="575.71" y="217.91" width="82.72" height="16.19" rx="3" ry="3" fill="#FFFFFF"/>
+<text x="578.71" y="230.42" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">parentaccountid</text>
+<rect x="662.42" y="233.91" width="120.04" height="16.19" rx="3" ry="3" fill="#FFFFFF"/>
+<text x="665.42" y="246.42" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">msa_managingpartnerid</text>
+<rect x="609.61" y="249.91" width="46.91" height="16.19" rx="3" ry="3" fill="#FFFFFF"/>
+<text x="612.61" y="262.42" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">masterid</text>
+<rect x="791.07" y="123.01" width="85.71" height="16.19" rx="3" ry="3" fill="#FFFFFF"/>
+<text x="794.07" y="135.52" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">primarycontactid</text>
+<rect x="1089.03" y="141.11" width="89.33" height="16.19" rx="3" ry="3" fill="#FFFFFF"/>
+<text x="1092.03" y="153.62" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">parentcustomerid</text>
+<rect x="1182.36" y="157.11" width="46.91" height="16.19" rx="3" ry="3" fill="#FFFFFF"/>
+<text x="1185.36" y="169.62" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">masterid</text>
+<rect x="265.06" y="168.91" width="81.89" height="16.19" rx="3" ry="3" fill="#FFFFFF"/>
+<text x="268.06" y="181.42" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Parent Category</text>
+<rect x="1860.91" y="995.36" width="14.19" height="70.19" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1861.41 1064.55) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Buyer Account</text>
+<rect x="1026.2" y="-29.19" width="14.19" height="33.39" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1026.7 3.2) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">msa_…</text>
+<rect x="1044.2" y="-26.6" width="14.19" height="30.8" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1044.7 3.2) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">pare…</text>
+<rect x="259.16" y="506.32" width="14.19" height="36.48" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(259.66 541.8) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Vendor</text>
+<rect x="1692.42" y="725.76" width="14.19" height="70.19" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1692.92 794.95) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Buyer Account</text>
+<rect x="1187.16" y="1246.92" width="14.19" height="36.48" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1187.66 1282.4) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Vendor</text>
+<rect x="268.47" y="989.28" width="14.19" height="36.48" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(268.97 1024.76) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Vendor</text>
+<rect x="486.43" y="49.73" width="14.19" height="31.27" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(486.93 80) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Prim…</text>
+<rect x="1710.42" y="727.95" width="14.19" height="67.99" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1710.92 794.95) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Buyer Contact</text>
+<rect x="241.16" y="443.09" width="14.19" height="99.71" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(241.66 541.8) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Marketplace Product</text>
+<rect x="232.47" y="926.05" width="14.19" height="99.71" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(232.97 1024.76) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Marketplace Product</text>
+<rect x="157.5" y="182.46" width="14.19" height="145.26" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(158 326.72) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Marketplace Product Category</text>
+<rect x="1728.42" y="720.14" width="14.19" height="75.81" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1728.92 794.95) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Delivery Region</text>
+<rect x="286.47" y="935.53" width="14.19" height="90.23" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(286.97 1024.76) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Marketplace Order</text>
+<rect x="1878.91" y="975.32" width="14.19" height="90.23" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1879.41 1064.55) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Marketplace Order</text>
+<rect x="1205.16" y="1193.17" width="14.19" height="90.23" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1205.66 1282.4) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Marketplace Order</text>
+<rect x="250.47" y="955.71" width="14.19" height="70.05" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(250.97 1024.76) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Vendor Listing</text>
+<rect x="1169.16" y="1187.16" width="14.19" height="96.24" rx="2" ry="2" fill="#FFFFFF"/>
+<text x="0" y="11.51" transform="translate(1169.66 1282.4) rotate(-90)" font-family="Segoe UI, Arial, sans-serif" font-size="10.67" fill="#373E46">Marketplace Invoice</text>
+</svg>
+
+</div>
+<h2 id="account">Account <span class="muted">(account)</span></h2><div class="sub">Business that represents a customer or potential customer. The company that is billed in business transactions.</div>
+<table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Account</td><td class="muted">accountid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge pk">PK</span>Address 1: ID</td><td class="muted">address1_addressid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge pk">PK</span>Address 2: ID</td><td class="muted">address2_addressid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Account Name</td><td class="muted">name</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Primary Region</td><td class="muted">hal_primaryregion</td><td>Lookup(hal_region)</td><td class="muted">→ hal_region</td></tr>
+<tr><td>Business Type</td><td class="muted">hal_businesstype</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Default Payment Terms</td><td class="muted">hal_defaultpaymentterms</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Is Approved Buyer</td><td class="muted">hal_isapprovedbuyer</td><td>Yes/No</td><td class="muted"></td></tr>
+<tr><td>Is Approved Vendor</td><td class="muted">hal_isapprovedvendor</td><td>Yes/No</td><td class="muted"></td></tr>
+<tr><td>KYB Status</td><td class="muted">hal_kybstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Magento Customer/Vendor ID</td><td class="muted">hal_magentoentityid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Trade License Number</td><td class="muted">hal_tradelicensenumber</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>TRN / VAT Number</td><td class="muted">hal_taxregistrationnumber</td><td>Text</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>account_parent_account</td><td>1:N</td><td class="muted">account.parentaccountid → account</td></tr>
+<tr><td>msa_account_managingpartner</td><td>1:N</td><td class="muted">account.msa_managingpartnerid → account</td></tr>
+<tr><td>account_master_account</td><td>1:N</td><td class="muted">account.masterid → account</td></tr>
+<tr><td>hal_marketplaceinvoice_BuyerAccount_account</td><td>1:N</td><td class="muted">hal_marketplaceinvoice.Buyer Account → account</td></tr>
+<tr><td>msa_contact_managingpartner</td><td>1:N</td><td class="muted">contact.msa_managingpartnerid → account</td></tr>
+<tr><td>contact_customer_accounts</td><td>1:N</td><td class="muted">contact.parentcustomerid → account</td></tr>
+<tr><td>account_primary_contact</td><td>N:1</td><td class="muted">account.primarycontactid → contact</td></tr>
+<tr><td>hal_vendorlisting_Vendor_account</td><td>1:N</td><td class="muted">hal_vendorlisting.Vendor → account</td></tr>
+<tr><td>hal_marketplaceorder_BuyerAccount_account</td><td>1:N</td><td class="muted">hal_marketplaceorder.Buyer Account → account</td></tr>
+<tr><td>hal_vendorpayout_Vendor_account</td><td>1:N</td><td class="muted">hal_vendorpayout.Vendor → account</td></tr>
+<tr><td>hal_marketplaceorderline_Vendor_account</td><td>1:N</td><td class="muted">hal_marketplaceorderline.Vendor → account</td></tr>
+<tr><td>hal_account_PrimaryRegion_hal_region</td><td>N:1</td><td class="muted">account.Primary Region → hal_region</td></tr>
+</table>
+<h2 id="contact">Contact <span class="muted">(contact)</span></h2><div class="sub">Person with whom a business unit has a relationship, such as customer, supplier, and colleague.</div>
+<table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Address 1: ID</td><td class="muted">address1_addressid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge pk">PK</span>Address 2: ID</td><td class="muted">address2_addressid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge pk">PK</span>Address 3: ID</td><td class="muted">address3_addressid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge pk">PK</span>Contact</td><td class="muted">contactid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Full Name</td><td class="muted">fullname</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Emirates ID / National ID</td><td class="muted">hal_nationalid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Is Primary Signatory</td><td class="muted">hal_isprimarysignatory</td><td>Yes/No</td><td class="muted"></td></tr>
+<tr><td>Magento User ID</td><td class="muted">hal_magentouserid</td><td>Text</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>msa_contact_managingpartner</td><td>N:1</td><td class="muted">contact.msa_managingpartnerid → account</td></tr>
+<tr><td>contact_customer_accounts</td><td>N:1</td><td class="muted">contact.parentcustomerid → account</td></tr>
+<tr><td>account_primary_contact</td><td>1:N</td><td class="muted">account.primarycontactid → contact</td></tr>
+<tr><td>hal_marketplaceorder_BuyerContact_contact</td><td>1:N</td><td class="muted">hal_marketplaceorder.Buyer Contact → contact</td></tr>
+<tr><td>contact_customer_contacts</td><td>1:N</td><td class="muted">contact.parentcustomerid → contact</td></tr>
+<tr><td>contact_master_contact</td><td>1:N</td><td class="muted">contact.masterid → contact</td></tr>
+</table>
+<h2 id="hal_marketplaceinvoice">Marketplace Invoice <span class="muted">(hal_marketplaceinvoice)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Marketplace Invoice</td><td class="muted">hal_marketplaceinvoiceid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Invoice Number</td><td class="muted">hal_invoicenumber</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Buyer Account</td><td class="muted">hal_buyeraccount</td><td>Lookup(account)</td><td class="muted">→ account</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Currency</td><td class="muted">transactioncurrencyid</td><td>Lookup(transactioncurrency)</td><td class="muted">→ transactioncurrency</td></tr>
+<tr><td><span class="badge fk">FK</span>Marketplace Order</td><td class="muted">hal_marketplaceorder</td><td>Lookup(hal_marketplaceorder)</td><td class="muted">→ hal_marketplaceorder</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Owner</td><td class="muted">ownerid</td><td>Owner</td><td class="muted">→ systemuser, team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Business Unit</td><td class="muted">owningbusinessunit</td><td>Lookup(businessunit)</td><td class="muted">→ businessunit</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Team</td><td class="muted">owningteam</td><td>Lookup(team)</td><td class="muted">→ team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning User</td><td class="muted">owninguser</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Document Status</td><td class="muted">hal_documentstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Due Date</td><td class="muted">hal_duedate</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Exchange Rate</td><td class="muted">exchangerate</td><td>Decimal</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Integration Status</td><td class="muted">hal_integrationstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Invoice Date</td><td class="muted">hal_invoicedate</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Magento Invoice ID</td><td class="muted">hal_magentoinvoiceid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Payment Status</td><td class="muted">hal_paymentstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Subtotal Amount</td><td class="muted">hal_subtotalamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Subtotal Amount (Base)</td><td class="muted">hal_subtotalamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Total Invoice Amount</td><td class="muted">hal_totalinvoiceamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Total Invoice Amount (Base)</td><td class="muted">hal_totalinvoiceamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>VAT Amount</td><td class="muted">hal_vatamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>VAT Amount (Base)</td><td class="muted">hal_vatamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_marketplaceinvoice_BuyerAccount_account</td><td>N:1</td><td class="muted">hal_marketplaceinvoice.Buyer Account → account</td></tr>
+<tr><td>hal_marketplaceinvoice_MarketplaceOrder_hal_marketplaceorder</td><td>N:1</td><td class="muted">hal_marketplaceinvoice.Marketplace Order → hal_marketplaceorder</td></tr>
+<tr><td>hal_vendorpayout_MarketplaceInvoice_hal_marketplaceinvoice</td><td>1:N</td><td class="muted">hal_vendorpayout.Marketplace Invoice → hal_marketplaceinvoice</td></tr>
+</table>
+<h2 id="hal_marketplaceorder">Marketplace Order <span class="muted">(hal_marketplaceorder)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Marketplace Order</td><td class="muted">hal_marketplaceorderid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Order Number</td><td class="muted">hal_ordernumber</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Buyer Account</td><td class="muted">hal_buyeraccount</td><td>Lookup(account)</td><td class="muted">→ account</td></tr>
+<tr><td><span class="badge fk">FK</span>Buyer Contact</td><td class="muted">hal_buyercontact</td><td>Lookup(contact)</td><td class="muted">→ contact</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Currency</td><td class="muted">transactioncurrencyid</td><td>Lookup(transactioncurrency)</td><td class="muted">→ transactioncurrency</td></tr>
+<tr><td><span class="badge fk">FK</span>Delivery Region</td><td class="muted">hal_deliveryregion</td><td>Lookup(hal_region)</td><td class="muted">→ hal_region</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Owner</td><td class="muted">ownerid</td><td>Owner</td><td class="muted">→ systemuser, team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Business Unit</td><td class="muted">owningbusinessunit</td><td>Lookup(businessunit)</td><td class="muted">→ businessunit</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Team</td><td class="muted">owningteam</td><td>Lookup(team)</td><td class="muted">→ team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning User</td><td class="muted">owninguser</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Exchange Rate</td><td class="muted">exchangerate</td><td>Decimal</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Integration Status</td><td class="muted">hal_integrationstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Magento Order ID</td><td class="muted">hal_magentoorderid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Order Date</td><td class="muted">hal_orderdate</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Order State</td><td class="muted">hal_orderstate</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Payment Status</td><td class="muted">hal_paymentstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Payment Terms</td><td class="muted">hal_paymentterms</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Subtotal Amount</td><td class="muted">hal_subtotalamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Subtotal Amount (Base)</td><td class="muted">hal_subtotalamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>System Source</td><td class="muted">hal_systemsource</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Total Order Amount</td><td class="muted">hal_totalorderamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Total Order Amount (Base)</td><td class="muted">hal_totalorderamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>VAT Amount</td><td class="muted">hal_vatamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>VAT Amount (Base)</td><td class="muted">hal_vatamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_marketplaceorder_BuyerAccount_account</td><td>N:1</td><td class="muted">hal_marketplaceorder.Buyer Account → account</td></tr>
+<tr><td>hal_marketplaceorder_BuyerContact_contact</td><td>N:1</td><td class="muted">hal_marketplaceorder.Buyer Contact → contact</td></tr>
+<tr><td>hal_marketplaceorder_DeliveryRegion_hal_region</td><td>N:1</td><td class="muted">hal_marketplaceorder.Delivery Region → hal_region</td></tr>
+<tr><td>hal_marketplaceorderline_MarketplaceOrder_hal_marketplaceorder</td><td>1:N</td><td class="muted">hal_marketplaceorderline.Marketplace Order → hal_marketplaceorder</td></tr>
+<tr><td>hal_marketplaceinvoice_MarketplaceOrder_hal_marketplaceorder</td><td>1:N</td><td class="muted">hal_marketplaceinvoice.Marketplace Order → hal_marketplaceorder</td></tr>
+<tr><td>hal_vendorpayout_MarketplaceOrder_hal_marketplaceorder</td><td>1:N</td><td class="muted">hal_vendorpayout.Marketplace Order → hal_marketplaceorder</td></tr>
+</table>
+<h2 id="hal_marketplaceorderline">Marketplace Order Line <span class="muted">(hal_marketplaceorderline)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Marketplace Order Line</td><td class="muted">hal_marketplaceorderlineid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Order Line Reference</td><td class="muted">hal_orderlinereference</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Currency</td><td class="muted">transactioncurrencyid</td><td>Lookup(transactioncurrency)</td><td class="muted">→ transactioncurrency</td></tr>
+<tr><td><span class="badge fk">FK</span>Marketplace Order</td><td class="muted">hal_marketplaceorder</td><td>Lookup(hal_marketplaceorder)</td><td class="muted">→ hal_marketplaceorder</td></tr>
+<tr><td><span class="badge fk">FK</span>Marketplace Product</td><td class="muted">hal_marketplaceproduct</td><td>Lookup(hal_marketplaceproduct)</td><td class="muted">→ hal_marketplaceproduct</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Owner</td><td class="muted">ownerid</td><td>Owner</td><td class="muted">→ systemuser, team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Business Unit</td><td class="muted">owningbusinessunit</td><td>Lookup(businessunit)</td><td class="muted">→ businessunit</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Team</td><td class="muted">owningteam</td><td>Lookup(team)</td><td class="muted">→ team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning User</td><td class="muted">owninguser</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Vendor</td><td class="muted">hal_vendor</td><td>Lookup(account)</td><td class="muted">→ account</td></tr>
+<tr><td><span class="badge fk">FK</span>Vendor Listing</td><td class="muted">hal_vendorlisting</td><td>Lookup(hal_vendorlisting)</td><td class="muted">→ hal_vendorlisting</td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Exchange Rate</td><td class="muted">exchangerate</td><td>Decimal</td><td class="muted"></td></tr>
+<tr><td>Fulfillment Status</td><td class="muted">hal_fulfillmentstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Line Total</td><td class="muted">hal_linetotal</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Line Total (Base)</td><td class="muted">hal_linetotal_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Line VAT Amount</td><td class="muted">hal_linevatamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Line VAT Amount (Base)</td><td class="muted">hal_linevatamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Magento Order Item ID</td><td class="muted">hal_magentoorderitemid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Quantity</td><td class="muted">hal_quantity</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Unit of Measure</td><td class="muted">hal_unitofmeasure</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Unit Price</td><td class="muted">hal_unitprice</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Unit Price (Base)</td><td class="muted">hal_unitprice_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_marketplaceorderline_Vendor_account</td><td>N:1</td><td class="muted">hal_marketplaceorderline.Vendor → account</td></tr>
+<tr><td>hal_marketplaceorderline_MarketplaceProduct_hal_marketplaceproduct</td><td>N:1</td><td class="muted">hal_marketplaceorderline.Marketplace Product → hal_marketplaceproduct</td></tr>
+<tr><td>hal_marketplaceorderline_MarketplaceOrder_hal_marketplaceorder</td><td>N:1</td><td class="muted">hal_marketplaceorderline.Marketplace Order → hal_marketplaceorder</td></tr>
+<tr><td>hal_marketplaceorderline_VendorListing_hal_vendorlisting</td><td>N:1</td><td class="muted">hal_marketplaceorderline.Vendor Listing → hal_vendorlisting</td></tr>
+</table>
+<h2 id="hal_marketplaceproduct">Marketplace Product <span class="muted">(hal_marketplaceproduct)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Marketplace Product</td><td class="muted">hal_marketplaceproductid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Product Name</td><td class="muted">hal_productname</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Currency</td><td class="muted">transactioncurrencyid</td><td>Lookup(transactioncurrency)</td><td class="muted">→ transactioncurrency</td></tr>
+<tr><td><span class="badge fk">FK</span>Marketplace Product Category</td><td class="muted">hal_marketplaceproductcategory</td><td>Lookup(hal_productcategory)</td><td class="muted">→ hal_productcategory</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Organization Id</td><td class="muted">organizationid</td><td>Lookup(organization)</td><td class="muted">→ organization</td></tr>
+<tr><td>Approval Status</td><td class="muted">hal_approvalstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Catalog Sync Status</td><td class="muted">hal_catalogsyncstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Description</td><td class="muted">hal_description</td><td>Multiline</td><td class="muted"></td></tr>
+<tr><td>Exchange Rate</td><td class="muted">exchangerate</td><td>Decimal</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Is Active</td><td class="muted">hal_isactive</td><td>Yes/No</td><td class="muted"></td></tr>
+<tr><td>Magento Product ID</td><td class="muted">hal_magentoproductid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Marketplace SKU</td><td class="muted">hal_marketplacesku</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Minimum Order Quantity (MOQ)</td><td class="muted">hal_minimumorderquantitymoq</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Unit of Measure</td><td class="muted">hal_unitofmeasure</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Unit Price</td><td class="muted">hal_unitprice</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Unit Price (Base)</td><td class="muted">hal_unitprice_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_vendorlisting_MarketplaceProduct_hal_marketplaceproduct</td><td>1:N</td><td class="muted">hal_vendorlisting.Marketplace Product → hal_marketplaceproduct</td></tr>
+<tr><td>hal_marketplaceorderline_MarketplaceProduct_hal_marketplaceproduct</td><td>1:N</td><td class="muted">hal_marketplaceorderline.Marketplace Product → hal_marketplaceproduct</td></tr>
+<tr><td>hal_marketplaceproduct_MarketplaceProductCategory_hal_productcategory</td><td>N:1</td><td class="muted">hal_marketplaceproduct.Marketplace Product Category → hal_productcategory</td></tr>
+</table>
+<h2 id="hal_region">Primary Region <span class="muted">(hal_region)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Region</td><td class="muted">hal_regionid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Region Name</td><td class="muted">hal_regionname</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Organization Id</td><td class="muted">organizationid</td><td>Lookup(organization)</td><td class="muted">→ organization</td></tr>
+<tr><td>Country</td><td class="muted">hal_country</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Is Free Zone</td><td class="muted">hal_isfreezone</td><td>Yes/No</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Region Code</td><td class="muted">hal_regioncode</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_account_PrimaryRegion_hal_region</td><td>1:N</td><td class="muted">account.Primary Region → hal_region</td></tr>
+<tr><td>hal_marketplaceorder_DeliveryRegion_hal_region</td><td>1:N</td><td class="muted">hal_marketplaceorder.Delivery Region → hal_region</td></tr>
+</table>
+<h2 id="hal_productcategory">Product Category <span class="muted">(hal_productcategory)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Product Category</td><td class="muted">hal_productcategoryid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Category Name</td><td class="muted">hal_categoryname</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Organization Id</td><td class="muted">organizationid</td><td>Lookup(organization)</td><td class="muted">→ organization</td></tr>
+<tr><td><span class="badge fk">FK</span>Parent Category</td><td class="muted">hal_parentcategory</td><td>Lookup(hal_productcategory)</td><td class="muted">→ hal_productcategory</td></tr>
+<tr><td>Category Code</td><td class="muted">hal_categorycode</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Magento Category ID</td><td class="muted">hal_magentocategoryid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_marketplaceproduct_MarketplaceProductCategory_hal_productcategory</td><td>1:N</td><td class="muted">hal_marketplaceproduct.Marketplace Product Category → hal_productcategory</td></tr>
+<tr><td>hal_productcategory_ParentCategory_hal_productcategory</td><td>1:N</td><td class="muted">hal_productcategory.Parent Category → hal_productcategory</td></tr>
+</table>
+<h2 id="hal_vendorlisting">Vendor Listing <span class="muted">(hal_vendorlisting)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Vendor Listing</td><td class="muted">hal_vendorlistingid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Listing Title</td><td class="muted">hal_listingtitle</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Currency</td><td class="muted">transactioncurrencyid</td><td>Lookup(transactioncurrency)</td><td class="muted">→ transactioncurrency</td></tr>
+<tr><td><span class="badge fk">FK</span>Marketplace Product</td><td class="muted">hal_marketplaceproduct</td><td>Lookup(hal_marketplaceproduct)</td><td class="muted">→ hal_marketplaceproduct</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Owner</td><td class="muted">ownerid</td><td>Owner</td><td class="muted">→ systemuser, team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Business Unit</td><td class="muted">owningbusinessunit</td><td>Lookup(businessunit)</td><td class="muted">→ businessunit</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Team</td><td class="muted">owningteam</td><td>Lookup(team)</td><td class="muted">→ team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning User</td><td class="muted">owninguser</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Vendor</td><td class="muted">hal_vendor</td><td>Lookup(account)</td><td class="muted">→ account</td></tr>
+<tr><td>Approval Status</td><td class="muted">hal_approvalstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Available Quantity</td><td class="muted">hal_availablequantity</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Catalog Sync Status</td><td class="muted">hal_catalogsyncstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Exchange Rate</td><td class="muted">exchangerate</td><td>Decimal</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Is Active</td><td class="muted">hal_isactive</td><td>Yes/No</td><td class="muted"></td></tr>
+<tr><td>Magento Listing ID</td><td class="muted">hal_magentolistingid</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Minimum Order Quantity</td><td class="muted">hal_minimumorderquantity</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Unit Price</td><td class="muted">hal_unitprice</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Unit Price (Base)</td><td class="muted">hal_unitprice_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Vendor SKU</td><td class="muted">hal_vendorsku</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_vendorlisting_Vendor_account</td><td>N:1</td><td class="muted">hal_vendorlisting.Vendor → account</td></tr>
+<tr><td>hal_vendorlisting_MarketplaceProduct_hal_marketplaceproduct</td><td>N:1</td><td class="muted">hal_vendorlisting.Marketplace Product → hal_marketplaceproduct</td></tr>
+<tr><td>hal_marketplaceorderline_VendorListing_hal_vendorlisting</td><td>1:N</td><td class="muted">hal_marketplaceorderline.Vendor Listing → hal_vendorlisting</td></tr>
+</table>
+<h2 id="hal_vendorpayout">Vendor Payout <span class="muted">(hal_vendorpayout)</span></h2><table><tr><th style="width:34%">Column</th><th style="width:22%">Logical name</th><th style="width:20%">Type</th><th>Detail</th></tr>
+<tr><td><span class="badge pk">PK</span>Vendor Payout</td><td class="muted">hal_vendorpayoutid</td><td>GUID</td><td class="muted"></td></tr>
+<tr><td><span class="badge nm">NAME</span>Payout Reference</td><td class="muted">hal_payoutreference</td><td>Text</td><td class="muted"></td></tr>
+<tr><td><span class="badge fk">FK</span>Created By</td><td class="muted">createdby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Created By (Delegate)</td><td class="muted">createdonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Currency</td><td class="muted">transactioncurrencyid</td><td>Lookup(transactioncurrency)</td><td class="muted">→ transactioncurrency</td></tr>
+<tr><td><span class="badge fk">FK</span>Marketplace Invoice</td><td class="muted">hal_marketplaceinvoice</td><td>Lookup(hal_marketplaceinvoice)</td><td class="muted">→ hal_marketplaceinvoice</td></tr>
+<tr><td><span class="badge fk">FK</span>Marketplace Order</td><td class="muted">hal_marketplaceorder</td><td>Lookup(hal_marketplaceorder)</td><td class="muted">→ hal_marketplaceorder</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By</td><td class="muted">modifiedby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Modified By (Delegate)</td><td class="muted">modifiedonbehalfby</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Owner</td><td class="muted">ownerid</td><td>Owner</td><td class="muted">→ systemuser, team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Business Unit</td><td class="muted">owningbusinessunit</td><td>Lookup(businessunit)</td><td class="muted">→ businessunit</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning Team</td><td class="muted">owningteam</td><td>Lookup(team)</td><td class="muted">→ team</td></tr>
+<tr><td><span class="badge fk">FK</span>Owning User</td><td class="muted">owninguser</td><td>Lookup(systemuser)</td><td class="muted">→ systemuser</td></tr>
+<tr><td><span class="badge fk">FK</span>Vendor</td><td class="muted">hal_vendor</td><td>Lookup(account)</td><td class="muted">→ account</td></tr>
+<tr><td>Bank Transfer Reference</td><td class="muted">hal_banktransferreference</td><td>Text</td><td class="muted"></td></tr>
+<tr><td>Commission Amount</td><td class="muted">hal_commissionamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Commission Amount (Base)</td><td class="muted">hal_commissionamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Commission Rate (%)</td><td class="muted">hal_commissionrate</td><td>Decimal</td><td class="muted"></td></tr>
+<tr><td>Created On</td><td class="muted">createdon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Exchange Rate</td><td class="muted">exchangerate</td><td>Decimal</td><td class="muted"></td></tr>
+<tr><td>Gross Sales Amount</td><td class="muted">hal_grosssalesamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Gross Sales Amount (Base)</td><td class="muted">hal_grosssalesamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Import Sequence Number</td><td class="muted">importsequencenumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Modified On</td><td class="muted">modifiedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Net Payout Amount</td><td class="muted">hal_netpayoutamount</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Net Payout Amount (Base)</td><td class="muted">hal_netpayoutamount_base</td><td>Currency</td><td class="muted"></td></tr>
+<tr><td>Payment Status</td><td class="muted">hal_paymentstatus</td><td>Choice</td><td class="muted"></td></tr>
+<tr><td>Payout Date</td><td class="muted">hal_payoutdate</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Record Created On</td><td class="muted">overriddencreatedon</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Settlement Period End</td><td class="muted">hal_settlementperiodend</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Settlement Period Start</td><td class="muted">hal_settlementperiodstart</td><td>Date/Time</td><td class="muted"></td></tr>
+<tr><td>Status</td><td class="muted">statecode</td><td>Status</td><td class="muted"></td></tr>
+<tr><td>Status Reason</td><td class="muted">statuscode</td><td>Status Reason</td><td class="muted"></td></tr>
+<tr><td>Time Zone Rule Version Number</td><td class="muted">timezoneruleversionnumber</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>UTC Conversion Time Zone Code</td><td class="muted">utcconversiontimezonecode</td><td>Whole Num</td><td class="muted"></td></tr>
+<tr><td>Version Number</td><td class="muted">versionnumber</td><td>Big Int</td><td class="muted"></td></tr>
+</table>
+<table style="margin-top:8px"><tr><th style="width:34%">Relationship</th><th style="width:12%">Type</th><th>Detail</th></tr>
+<tr><td>hal_vendorpayout_Vendor_account</td><td>N:1</td><td class="muted">hal_vendorpayout.Vendor → account</td></tr>
+<tr><td>hal_vendorpayout_MarketplaceOrder_hal_marketplaceorder</td><td>N:1</td><td class="muted">hal_vendorpayout.Marketplace Order → hal_marketplaceorder</td></tr>
+<tr><td>hal_vendorpayout_MarketplaceInvoice_hal_marketplaceinvoice</td><td>N:1</td><td class="muted">hal_vendorpayout.Marketplace Invoice → hal_marketplaceinvoice</td></tr>
+</table>
+<div class="sub" style="margin-top:24px">Generated by Dataverse ERD Visualizer for XrmToolBox</div>
+</div></body></html>
